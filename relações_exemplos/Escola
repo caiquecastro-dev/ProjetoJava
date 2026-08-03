@@ -1,0 +1,39 @@
+package relações_exemplos;
+
+public class Escola {
+    // Atributos
+    private final String nome, CNPJ;
+    private Endereco endereco;
+    private Departamento departamentos;
+    private Aluno[] discentes;
+    private int nr_departamentos;
+
+
+    // Métodos
+    public final Escola (String nome, String CNPJ) {
+        this.nome = nome;
+        this.CNPJ = CNPJ;
+        this.departamentos = new Departamento[10];
+        this.discentes = new Aluno[1000];
+        this.nr_departamentos = 0;
+        this.nr_discentes = 0;
+    }
+    public void criarDepartamento(Stirng nomeDepartamento) {
+        if(nr_departamentos <= 10) {
+            departamentos[nr_departamentos] = new Departamento (
+                nomeDepartamento);
+                nr_departamentos++;
+        } else {
+            System.out.println("Não é possível criar outro Departamento.");
+        }
+    public void matriculaAluno (Aluno novoAluno) {
+        discentes [nr_discentes] = novoAluno;
+        nr_discentes++;
+    }
+    public void imprimirEscola() {
+        System.out.println("Nome da Escola: " + this.nome);
+        System.out.println("CNPJ: " + this.CNPJ);
+        System.out.println("Número de Departamentos: " + this.nr_departamentos);
+        System.out.println("Número de Alunos: " + this.nr_discentes);
+    }
+}

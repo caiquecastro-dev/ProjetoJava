@@ -1,0 +1,25 @@
+public class Departamento extends Escola{
+    private final String nomeDepartamento;
+    private final int nr_Departamentos;
+
+    public Departamento(String nome, int nr_Departamentos) {
+        this.nomeDepartamento = nomeDepartamento;
+        this.nr_Departamentos = nr_Departamentos;
+    }
+    public void definirNome(String nomeDepartamento) {
+        this.nomeDepartamento = nomeDepartamento;
+    }
+    public void definirNr_Departamentos(int nr_Departamentos) {
+        this.nr_Departamentos = nr_Departamentos;
+    }
+    public String obterNome_Departamento() {
+        return this.nomeDepartamento;
+    }
+    public int obterNr_Departamentos() {
+        return this.nr_Departamentos;
+    }
+    public void imprimirDepartamento() {
+        System.out.println("Nome do Departamento: " + this.nomeDepartamento);
+        System.out.println("Número de Departamentos: " + this.nr_Departamentos);
+    }
+}
