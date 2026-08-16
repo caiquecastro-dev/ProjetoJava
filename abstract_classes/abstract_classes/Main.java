@@ -10,7 +10,7 @@ abstract class Animal {
     }
 
     public void tipoDeAnimal() {
-        System.out.println("É um animal selvagem");
+        System.out.println("É um animal selvagem!");
     }
 }
 
@@ -50,7 +50,7 @@ public class Main {
         gato.dormir();
 
         leao.emitirSom();
-        leao.dormir();
         leao.tipoDeAnimal();
+        leao.dormir();
     }
 }
