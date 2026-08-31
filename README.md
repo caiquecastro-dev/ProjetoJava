@@ -1,2 +1,2 @@
 # ProjetoJava
-Aprendendo a programar em Java
+Estou cursando Análise e Desenvolvimento de Sistemas e por isso, resolvi criar este repositório para que fique registrado minha evolução nessa linguagem.
