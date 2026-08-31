@@ -3,6 +3,7 @@ package agrupamento_exemplos;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Aluno {
@@ -41,14 +42,12 @@ class Endereco {
     private String rua;
 
     public Endereco(String rua) {
-        this.rua = rua;
     }
 }
 
 class Escola {
     // Atributos
     private String nome, CNPJ;
-    private Endereco endereco;
     private List<Departamento> departamentos;
     private List<Aluno> discentes;
 
@@ -77,10 +76,10 @@ class Escola {
     }
 
     public void agruparAlunos() {
-        Map<String, List<Aluno>> agrupamento =
-        discentes.stream().collect(Collectors.groupingBy(Aluno::recuperarNaturalidade));
+        Map<String, Set<Aluno>> agrupamento =
+        discentes.stream().collect(Collectors.groupingBy(Aluno::recuperarNaturalidade,Collectors.toSet()));
         System.out.println("Resultado do agrupamento por naturalidade: ");
-        agrupamento.forEach((String chave,List<Aluno> lista)-> System.out.println(chave+" = "+lista));
+        agrupamento.forEach((String chave,Set<Aluno> conjunto)-> System.out.println(chave+" = "+conjunto));
         }
 
 }
