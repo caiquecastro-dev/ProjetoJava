@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 public class Aluno {
@@ -77,7 +78,7 @@ class Escola {
 
     public void agruparAlunos() {
         Map<String, Set<Aluno>> agrupamento =
-        discentes.stream().collect(Collectors.groupingBy(Aluno::recuperarNaturalidade,Collectors.toSet()));
+        discentes.stream().collect(Collectors.groupingBy(Aluno::recuperarNaturalidade, TreeMap :: new, Collectors.toSet()));
         System.out.println("Resultado do agrupamento por naturalidade: ");
         agrupamento.forEach((String chave,Set<Aluno> conjunto)-> System.out.println(chave+" = "+conjunto));
         }
