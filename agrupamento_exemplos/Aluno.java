@@ -1,9 +1,9 @@
 package agrupamento_exemplos;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Aluno {
     //Atributos    
@@ -77,15 +77,12 @@ class Escola {
     }
 
     public void agruparAlunos() {
-        Map<String, List<Aluno>> agrupamento = new HashMap<>();
-        for (Aluno a : discentes) {
-            if (!agrupamento.containsKey(a.recuperarNaturalidade())) {
-                agrupamento.put(a.recuperarNaturalidade(), new ArrayList<>());
-            }
-            agrupamento.get(a.recuperarNaturalidade()).add(a);
+        Map<String, List<Aluno>> agrupamento =
+        discentes.stream().collect(Collectors.groupingBy(Aluno::recuperarNaturalidade));
+        System.out.println("Resultado do agrupamento por naturalidade: ");
+        agrupamento.forEach((String chave,List<Aluno> lista)-> System.out.println(chave+" = "+lista));
         }
-        System.out.println("Resultado do agrupamento por naturalidade: " + agrupamento);
-    }
+
 }
 
 class Principal {
