@@ -11,7 +11,7 @@ public class Aluno extends Pessoa {
 
     //Métodos
     public Aluno (String nome, String nacionalidade, String naturalidade) {
-        super(nome, nacionalidade, naturalidade);
+        super(nome, nacionalidade, naturalidade, null);
         matricula = UUID.randomUUID().toString();
     }
 
