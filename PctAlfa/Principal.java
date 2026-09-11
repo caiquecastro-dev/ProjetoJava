@@ -2,7 +2,7 @@ package PctAlfa;
 import PctBravo.*;
 
 class Execucao extends Externa {
-    private String id;
+    private final String id;
     Externa.Interna exint;
     public Execucao () {
         exint = new Externa().new Interna();
@@ -12,6 +12,9 @@ class Execucao extends Externa {
     @Override 
     public String getId() {
         return id;
+    }
+    public Externa.Interna getExternaInterna() {
+        return exint;
     }
 }
 public class Principal {
