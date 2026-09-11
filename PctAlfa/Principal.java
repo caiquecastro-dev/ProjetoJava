@@ -9,6 +9,10 @@ class Execucao extends Externa {
         id = "PctAlfa.Execucao";
         System.out.println("PctAlfa.Execucao instanciada." );
     }
+    @Override 
+    public String getId() {
+        return id;
+    }
 }
 public class Principal {
     static Execucao ex;

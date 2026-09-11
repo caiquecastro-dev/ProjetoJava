@@ -24,8 +24,14 @@ class Pessoa{
     protected String RecuperarNome(){
         return this.nome;
     }
+    protected void AtualizarNacionalidade(String nacionalidade){
+        this.nacionalidade = nacionalidade;
+    }
     protected String RecuperarNacionalidade(){
         return this.nacionalidade;
+    }
+    protected void AtualizarNaturalidade(String naturalidade) {
+        this.naturalidade = naturalidade;
     }
     protected String RecuperarNaturalidade(){
         return this.naturalidade;
