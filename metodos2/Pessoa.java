@@ -1,3 +1,5 @@
+package metodos2;
+
 public class Pessoa {
     //Atributos
     public String nome,  naturalidade, nacionalidade, endereco;

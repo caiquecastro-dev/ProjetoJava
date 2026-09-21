@@ -1,4 +1,4 @@
-package abstract_classes;
+package abstract_classes.abstract_classes;
 
 abstract class Animal {
     // metodo abstrato

@@ -1,3 +1,5 @@
+package metodos2;
+
 public class Fisica extends Pessoa {
     //Atributos
     public String CPF;

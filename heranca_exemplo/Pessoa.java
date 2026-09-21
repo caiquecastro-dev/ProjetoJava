@@ -1,3 +1,5 @@
+package heranca_exemplo;
+
 public class Pessoa  {
     private final String nome;
     private final String cpf;
