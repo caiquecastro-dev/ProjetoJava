@@ -1,5 +1,5 @@
-package PctAlfa;
-import PctBravo.*;
+package pctalfa;
+import pctbravo.*;
 
 class Execucao extends Externa {
     private final String id;

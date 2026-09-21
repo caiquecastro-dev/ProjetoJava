@@ -1,4 +1,4 @@
-package PctBravo;
+package pctbravo;
 public class Externa {
     private String id;
     public Externa() {

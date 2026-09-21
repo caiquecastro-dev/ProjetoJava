@@ -1,10 +1,12 @@
-package PctBravo;
+package pctbravo;
 
 public class Estendida extends Externa.Interna {
-    private String id;
     public Estendida() {
         new Externa().super();
-        id = "PctBravo.Estendida";
         System.out.println("PctBravo.Estendida instanciada.");
+    }
+    @Override
+    public String getId() {
+        return super.getId();
     }
 }
